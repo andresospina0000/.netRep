@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TaqueroModelStoreContainer" CdmEntityContainer="AntojitosEntities">
+    <EntitySetMapping Name="TEST_CLIENTE">
+      <EntityTypeMapping TypeName="TaqueroModel.TEST_CLIENTE">
+        <MappingFragment StoreEntitySet="TEST_CLIENTE">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Identifiacion" ColumnName="Identifiacion" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEST_FACTURA">
+      <EntityTypeMapping TypeName="TaqueroModel.TEST_FACTURA">
+        <MappingFragment StoreEntitySet="TEST_FACTURA">
+          <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="FechaVenta" ColumnName="FechaVenta" />
+          <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEST_FACTURA_DETALLE">
+      <EntityTypeMapping TypeName="TaqueroModel.TEST_FACTURA_DETALLE">
+        <MappingFragment StoreEntitySet="TEST_FACTURA_DETALLE">
+          <ScalarProperty Name="IdFacturaDetalle" ColumnName="IdFacturaDetalle" />
+          <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ValorUnidad" ColumnName="ValorUnidad" />
+          <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TEST_PRODUCTO">
+      <EntityTypeMapping TypeName="TaqueroModel.TEST_PRODUCTO">
+        <MappingFragment StoreEntitySet="TEST_PRODUCTO">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ValorUnidad" ColumnName="ValorUnidad" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

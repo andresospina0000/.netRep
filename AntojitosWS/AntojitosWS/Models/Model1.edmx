@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TaqueroModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TEST_CLIENTE">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Identifiacion" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Nombres" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Apellidos" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="TEST_FACTURA">
+          <Key>
+            <PropertyRef Name="IdFactura" />
+          </Key>
+          <Property Name="IdFactura" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdCliente" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FechaVenta" Type="datetime" Nullable="false" />
+          <Property Name="ValorTotal" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TEST_FACTURA_DETALLE">
+          <Key>
+            <PropertyRef Name="IdFacturaDetalle" />
+          </Key>
+          <Property Name="IdFacturaDetalle" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdFactura" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="IdProducto" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Cantidad" Type="int" Nullable="false" />
+          <Property Name="ValorUnidad" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ValorTotal" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TEST_PRODUCTO">
+          <Key>
+            <PropertyRef Name="IdProducto" />
+          </Key>
+          <Property Name="IdProducto" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ValorUnidad" Type="numeric" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="Stock" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__TEST_FACT__IdFac__2C3393D0">
+          <End Role="TEST_FACTURA" Type="Self.TEST_FACTURA" Multiplicity="1" />
+          <End Role="TEST_FACTURA_DETALLE" Type="Self.TEST_FACTURA_DETALLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEST_FACTURA">
+              <PropertyRef Name="IdFactura" />
+            </Principal>
+            <Dependent Role="TEST_FACTURA_DETALLE">
+              <PropertyRef Name="IdFactura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TEST_FACT__IdPro__2D27B809">
+          <End Role="TEST_PRODUCTO" Type="Self.TEST_PRODUCTO" Multiplicity="1" />
+          <End Role="TEST_FACTURA_DETALLE" Type="Self.TEST_FACTURA_DETALLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEST_PRODUCTO">
+              <PropertyRef Name="IdProducto" />
+            </Principal>
+            <Dependent Role="TEST_FACTURA_DETALLE">
+              <PropertyRef Name="IdProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TEST_FACT__Valor__29572725">
+          <End Role="TEST_CLIENTE" Type="Self.TEST_CLIENTE" Multiplicity="1" />
+          <End Role="TEST_FACTURA" Type="Self.TEST_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEST_CLIENTE">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="TEST_FACTURA">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TaqueroModelStoreContainer">
+          <EntitySet Name="TEST_CLIENTE" EntityType="Self.TEST_CLIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEST_FACTURA" EntityType="Self.TEST_FACTURA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEST_FACTURA_DETALLE" EntityType="Self.TEST_FACTURA_DETALLE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEST_PRODUCTO" EntityType="Self.TEST_PRODUCTO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__TEST_FACT__IdFac__2C3393D0" Association="Self.FK__TEST_FACT__IdFac__2C3393D0">
+            <End Role="TEST_FACTURA" EntitySet="TEST_FACTURA" />
+            <End Role="TEST_FACTURA_DETALLE" EntitySet="TEST_FACTURA_DETALLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TEST_FACT__IdPro__2D27B809" Association="Self.FK__TEST_FACT__IdPro__2D27B809">
+            <End Role="TEST_PRODUCTO" EntitySet="TEST_PRODUCTO" />
+            <End Role="TEST_FACTURA_DETALLE" EntitySet="TEST_FACTURA_DETALLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TEST_FACT__Valor__29572725" Association="Self.FK__TEST_FACT__Valor__29572725">
+            <End Role="TEST_CLIENTE" EntitySet="TEST_CLIENTE" />
+            <End Role="TEST_FACTURA" EntitySet="TEST_FACTURA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TaqueroModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TEST_CLIENTE">
+          <Key>
+            <PropertyRef Name="IdCliente" />
+          </Key>
+          <Property Name="IdCliente" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Identifiacion" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Nombres" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Apellidos" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TEST_FACTURA" Relationship="Self.FK__TEST_FACT__Valor__29572725" FromRole="TEST_CLIENTE" ToRole="TEST_FACTURA" />
+        </EntityType>
+        <EntityType Name="TEST_FACTURA">
+          <Key>
+            <PropertyRef Name="IdFactura" />
+          </Key>
+          <Property Name="IdFactura" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdCliente" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="FechaVenta" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ValorTotal" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <NavigationProperty Name="TEST_CLIENTE" Relationship="Self.FK__TEST_FACT__Valor__29572725" FromRole="TEST_FACTURA" ToRole="TEST_CLIENTE" />
+          <NavigationProperty Name="TEST_FACTURA_DETALLE" Relationship="Self.FK__TEST_FACT__IdFac__2C3393D0" FromRole="TEST_FACTURA" ToRole="TEST_FACTURA_DETALLE" />
+        </EntityType>
+        <EntityType Name="TEST_FACTURA_DETALLE">
+          <Key>
+            <PropertyRef Name="IdFacturaDetalle" />
+          </Key>
+          <Property Name="IdFacturaDetalle" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdFactura" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="IdProducto" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Cantidad" Type="Int32" Nullable="false" />
+          <Property Name="ValorUnidad" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ValorTotal" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <NavigationProperty Name="TEST_FACTURA" Relationship="Self.FK__TEST_FACT__IdFac__2C3393D0" FromRole="TEST_FACTURA_DETALLE" ToRole="TEST_FACTURA" />
+          <NavigationProperty Name="TEST_PRODUCTO" Relationship="Self.FK__TEST_FACT__IdPro__2D27B809" FromRole="TEST_FACTURA_DETALLE" ToRole="TEST_PRODUCTO" />
+        </EntityType>
+        <EntityType Name="TEST_PRODUCTO">
+          <Key>
+            <PropertyRef Name="IdProducto" />
+          </Key>
+          <Property Name="IdProducto" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Codigo" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ValorUnidad" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="Stock" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TEST_FACTURA_DETALLE" Relationship="Self.FK__TEST_FACT__IdPro__2D27B809" FromRole="TEST_PRODUCTO" ToRole="TEST_FACTURA_DETALLE" />
+        </EntityType>
+        <Association Name="FK__TEST_FACT__Valor__29572725">
+          <End Role="TEST_CLIENTE" Type="Self.TEST_CLIENTE" Multiplicity="1" />
+          <End Role="TEST_FACTURA" Type="Self.TEST_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEST_CLIENTE">
+              <PropertyRef Name="IdCliente" />
+            </Principal>
+            <Dependent Role="TEST_FACTURA">
+              <PropertyRef Name="IdCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TEST_FACT__IdFac__2C3393D0">
+          <End Role="TEST_FACTURA" Type="Self.TEST_FACTURA" Multiplicity="1" />
+          <End Role="TEST_FACTURA_DETALLE" Type="Self.TEST_FACTURA_DETALLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEST_FACTURA">
+              <PropertyRef Name="IdFactura" />
+            </Principal>
+            <Dependent Role="TEST_FACTURA_DETALLE">
+              <PropertyRef Name="IdFactura" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TEST_FACT__IdPro__2D27B809">
+          <End Role="TEST_PRODUCTO" Type="Self.TEST_PRODUCTO" Multiplicity="1" />
+          <End Role="TEST_FACTURA_DETALLE" Type="Self.TEST_FACTURA_DETALLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEST_PRODUCTO">
+              <PropertyRef Name="IdProducto" />
+            </Principal>
+            <Dependent Role="TEST_FACTURA_DETALLE">
+              <PropertyRef Name="IdProducto" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AntojitosEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TEST_CLIENTE" EntityType="Self.TEST_CLIENTE" />
+          <EntitySet Name="TEST_FACTURA" EntityType="Self.TEST_FACTURA" />
+          <EntitySet Name="TEST_FACTURA_DETALLE" EntityType="Self.TEST_FACTURA_DETALLE" />
+          <EntitySet Name="TEST_PRODUCTO" EntityType="Self.TEST_PRODUCTO" />
+          <AssociationSet Name="FK__TEST_FACT__Valor__29572725" Association="Self.FK__TEST_FACT__Valor__29572725">
+            <End Role="TEST_CLIENTE" EntitySet="TEST_CLIENTE" />
+            <End Role="TEST_FACTURA" EntitySet="TEST_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TEST_FACT__IdFac__2C3393D0" Association="Self.FK__TEST_FACT__IdFac__2C3393D0">
+            <End Role="TEST_FACTURA" EntitySet="TEST_FACTURA" />
+            <End Role="TEST_FACTURA_DETALLE" EntitySet="TEST_FACTURA_DETALLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TEST_FACT__IdPro__2D27B809" Association="Self.FK__TEST_FACT__IdPro__2D27B809">
+            <End Role="TEST_PRODUCTO" EntitySet="TEST_PRODUCTO" />
+            <End Role="TEST_FACTURA_DETALLE" EntitySet="TEST_FACTURA_DETALLE" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TaqueroModelStoreContainer" CdmEntityContainer="AntojitosEntities">
+          <EntitySetMapping Name="TEST_CLIENTE">
+            <EntityTypeMapping TypeName="TaqueroModel.TEST_CLIENTE">
+              <MappingFragment StoreEntitySet="TEST_CLIENTE">
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="Identifiacion" ColumnName="Identifiacion" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEST_FACTURA">
+            <EntityTypeMapping TypeName="TaqueroModel.TEST_FACTURA">
+              <MappingFragment StoreEntitySet="TEST_FACTURA">
+                <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+                <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+                <ScalarProperty Name="FechaVenta" ColumnName="FechaVenta" />
+                <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEST_FACTURA_DETALLE">
+            <EntityTypeMapping TypeName="TaqueroModel.TEST_FACTURA_DETALLE">
+              <MappingFragment StoreEntitySet="TEST_FACTURA_DETALLE">
+                <ScalarProperty Name="IdFacturaDetalle" ColumnName="IdFacturaDetalle" />
+                <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="ValorUnidad" ColumnName="ValorUnidad" />
+                <ScalarProperty Name="ValorTotal" ColumnName="ValorTotal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEST_PRODUCTO">
+            <EntityTypeMapping TypeName="TaqueroModel.TEST_PRODUCTO">
+              <MappingFragment StoreEntitySet="TEST_PRODUCTO">
+                <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="ValorUnidad" ColumnName="ValorUnidad" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
