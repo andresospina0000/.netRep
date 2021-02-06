@@ -1,0 +1,15 @@
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\bin\Debug\netcoreapp3.0\JMusick.Data.deps.json
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\bin\Debug\netcoreapp3.0\JMusick.Data.runtimeconfig.json
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\bin\Debug\netcoreapp3.0\JMusick.Data.runtimeconfig.dev.json
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\bin\Debug\netcoreapp3.0\JMusick.Data.dll
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\bin\Debug\netcoreapp3.0\JMusick.Data.pdb
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\bin\Debug\netcoreapp3.0\JMusick.Models.dll
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\bin\Debug\netcoreapp3.0\JMusick.Models.pdb
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\obj\Debug\netcoreapp3.0\JMusick.Data.csprojAssemblyReference.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\obj\Debug\netcoreapp3.0\JMusick.Data.AssemblyInfoInputs.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\obj\Debug\netcoreapp3.0\JMusick.Data.AssemblyInfo.cs
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\obj\Debug\netcoreapp3.0\JMusick.Data.csproj.CoreCompileInputs.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\obj\Debug\netcoreapp3.0\JMusick.Data.csproj.CopyComplete
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\obj\Debug\netcoreapp3.0\JMusick.Data.dll
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\obj\Debug\netcoreapp3.0\JMusick.Data.pdb
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Data\obj\Debug\netcoreapp3.0\JMusick.Data.genruntimeconfig.cache

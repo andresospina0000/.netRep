@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "JMusic.Dtos/1.0.0": {
+        "dependencies": {
+          "JMusick.Models": "1.0.0"
+        },
+        "runtime": {
+          "JMusic.Dtos.dll": {}
+        }
+      },
+      "JMusick.Models/1.0.0": {
+        "runtime": {
+          "JMusick.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JMusic.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JMusick.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\bin\Debug\netcoreapp3.0\JMusic.Dtos.deps.json
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\bin\Debug\netcoreapp3.0\JMusic.Dtos.dll
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\bin\Debug\netcoreapp3.0\JMusic.Dtos.pdb
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\bin\Debug\netcoreapp3.0\JMusick.Models.dll
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\bin\Debug\netcoreapp3.0\JMusick.Models.pdb
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\obj\Debug\netcoreapp3.0\JMusic.Dtos.csprojAssemblyReference.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\obj\Debug\netcoreapp3.0\JMusic.Dtos.AssemblyInfoInputs.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\obj\Debug\netcoreapp3.0\JMusic.Dtos.AssemblyInfo.cs
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\obj\Debug\netcoreapp3.0\JMusic.Dtos.csproj.CoreCompileInputs.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\obj\Debug\netcoreapp3.0\JMusic.Dtos.csproj.CopyComplete
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\obj\Debug\netcoreapp3.0\JMusic.Dtos.dll
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusic.Dtos\obj\Debug\netcoreapp3.0\JMusic.Dtos.pdb

@@ -1,0 +1,81 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "JMusick.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/JMusick.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/JMusick.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JMusick.Models/1.0.0": {
+      "type": "project",
+      "path": "../JMusick.Models/JMusick.Models.csproj",
+      "msbuildProject": "../JMusick.Models/JMusick.Models.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "JMusick.Models >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\USUARIO\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\Desarrollo\\Web_API\\JMusick_JWT\\JMusick\\JMusic.Dtos\\JMusic.Dtos.csproj",
+      "projectName": "JMusic.Dtos",
+      "projectPath": "D:\\Desarrollo\\Web_API\\JMusick_JWT\\JMusick\\JMusic.Dtos\\JMusic.Dtos.csproj",
+      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+      "outputPath": "D:\\Desarrollo\\Web_API\\JMusick_JWT\\JMusick\\JMusic.Dtos\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "D:\\Desarrollo\\Web_API\\JMusick_JWT\\JMusick\\JMusick.Models\\JMusick.Models.csproj": {
+              "projectPath": "D:\\Desarrollo\\Web_API\\JMusick_JWT\\JMusick\\JMusick.Models\\JMusick.Models.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461"
+        ],
+        "assetTargetFallback": true,
+        "warn": true
+      }
+    }
+  }
+}

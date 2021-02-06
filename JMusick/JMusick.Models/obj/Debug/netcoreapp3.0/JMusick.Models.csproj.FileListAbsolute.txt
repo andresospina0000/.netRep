@@ -1,0 +1,8 @@
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Models\bin\Debug\netcoreapp3.0\JMusick.Models.deps.json
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Models\bin\Debug\netcoreapp3.0\JMusick.Models.dll
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Models\bin\Debug\netcoreapp3.0\JMusick.Models.pdb
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Models\obj\Debug\netcoreapp3.0\JMusick.Models.AssemblyInfoInputs.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Models\obj\Debug\netcoreapp3.0\JMusick.Models.AssemblyInfo.cs
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Models\obj\Debug\netcoreapp3.0\JMusick.Models.csproj.CoreCompileInputs.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Models\obj\Debug\netcoreapp3.0\JMusick.Models.dll
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.Models\obj\Debug\netcoreapp3.0\JMusick.Models.pdb

@@ -1,0 +1,6 @@
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.WebApi\obj\Debug\netcoreapp2.2\JMusick.WebApi.csprojAssemblyReference.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.WebApi\obj\Debug\netcoreapp2.2\JMusick.WebApi.AssemblyInfoInputs.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.WebApi\obj\Debug\netcoreapp2.2\JMusick.WebApi.AssemblyInfo.cs
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.WebApi\obj\Debug\netcoreapp2.2\JMusick.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.WebApi\obj\Debug\netcoreapp2.2\JMusick.WebApi.RazorAssemblyInfo.cache
+C:\Users\Yoiner.Castillo\source\repos\JMusick\JMusick.WebApi\obj\Debug\netcoreapp2.2\JMusick.WebApi.RazorAssemblyInfo.cs
